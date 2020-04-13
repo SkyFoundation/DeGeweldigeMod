@@ -24,7 +24,7 @@ import net.minecraft.world.gen.structure.*;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
-
+//todo 修改并添加更多的自定义方块
 public class ChunkProviderCheese implements IChunkGenerator {
 	protected static final IBlockState STONE = CheeseBlocks.CHEESE_STONE.getDefaultState();
 	private final Random rand;
