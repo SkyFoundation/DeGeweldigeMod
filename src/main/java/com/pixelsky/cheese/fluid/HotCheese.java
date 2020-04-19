@@ -14,8 +14,8 @@ public class HotCheese extends Fluid {
 
     protected static int mapColor = 0xFFFFFFFF;
     protected static float overlayAlpha = 0.2F;
-    protected static SoundEvent emptySound = SoundEvents.ITEM_BUCKET_EMPTY;
-    protected static SoundEvent fillSound = SoundEvents.ITEM_BUCKET_FILL;
+   // protected static SoundEvent emptySound = SoundEvents.ITEM_BUCKET_EMPTY;
+   // protected static SoundEvent fillSound = SoundEvents.ITEM_BUCKET_FILL;
     protected static Material material = Material.WATER;
 
 
@@ -36,27 +36,6 @@ public class HotCheese extends Fluid {
         return mapColor;
     }
 
-    @Override
-    public Fluid setEmptySound(SoundEvent parSound) {
-        emptySound = parSound;
-        return this;
-    }
-
-    @Override
-    public Fluid setFillSound(SoundEvent parSound) {
-        fillSound = parSound;
-        return this;
-    }
-
-    @Override
-    public SoundEvent getFillSound() {
-        return fillSound;
-    }
-
-    @Override
-    public SoundEvent getEmptySound() {
-        return emptySound;
-    }
 
     public Material getMaterial()
     {

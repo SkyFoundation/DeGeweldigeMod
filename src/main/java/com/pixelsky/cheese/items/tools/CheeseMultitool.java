@@ -88,8 +88,9 @@ public class CheeseMultitool extends ItemTool {
 		}
 	}
 
-	public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos,
-			EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+	@Override
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		ItemStack stack=playerIn.getHeldItem(hand);
 		if (!playerIn.canPlayerEdit(pos.offset(facing), facing, stack)) {
 			return EnumActionResult.FAIL;
 		} else {
