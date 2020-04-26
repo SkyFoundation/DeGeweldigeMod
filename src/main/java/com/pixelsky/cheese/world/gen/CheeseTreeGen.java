@@ -17,7 +17,7 @@ public class CheeseTreeGen extends WorldGenAbstractTree
     private static final IBlockState DARK_OAK_LOG = CheeseBlocks.CHEESE_LOG.getDefaultState();
     private static final IBlockState DARK_OAK_LEAVES = CheeseBlocks.CHEESE_LEAVES.getDefaultState();
 
-    public CheeseTreeGen(boolean notify)
+    public CheeseTreeGen()
     {
         super(true);
     }

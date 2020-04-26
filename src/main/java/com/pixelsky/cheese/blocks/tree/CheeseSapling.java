@@ -74,7 +74,7 @@ public class CheeseSapling extends BlockBush implements IGrowable
     public void generateTree(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
         if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(worldIn, rand, pos)) return;
-        WorldGenerator worldgenerator = new CheeseTreeGen(false);
+        WorldGenerator worldgenerator = new CheeseTreeGen();
         int i = 0;
         int j = 0;
            IBlockState air_state = Blocks.AIR.getDefaultState();

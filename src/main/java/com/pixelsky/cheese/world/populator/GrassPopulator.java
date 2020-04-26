@@ -2,6 +2,7 @@ package com.pixelsky.cheese.world.populator;
 
 import com.pixelsky.cheese.init.CheeseBlocks;
 import jdk.nashorn.internal.ir.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
@@ -16,6 +17,13 @@ public class GrassPopulator extends BlockPopulator {
         return 4;
     }
 
+    private int getHeight(int x,int z,ChunkPrimer chunkPrimer){
+        int ret = 255;
+        while(chunkPrimer.getBlockState(x,ret,z).getBlock().equals(Blocks.AIR))
+            ret--;
+        return ret + 1;
+    }
+
 
     @Override
     public void populate(World world,int chunkX,int chunkZ, Random random, ChunkPrimer chunkPrimer) {
@@ -24,9 +32,7 @@ public class GrassPopulator extends BlockPopulator {
             for (int j = 0;j<16;j++) {
                 int x = i;
                 int z = j;
-                if (x == z && x == 15)
-                    return;
-                int height = chunkPrimer.findGroundBlockIdx(x,z);
+                int height = this.getHeight(x,z,chunkPrimer);
                 int dh = getDH(grass.getValue(chunkX*16+x,chunkZ*16+z));
                 for (int k = 0;k<dh-1;k++)
                     chunkPrimer.setBlockState(x,height+k,z, CheeseBlocks.CHEESE_DIRT.getDefaultState());

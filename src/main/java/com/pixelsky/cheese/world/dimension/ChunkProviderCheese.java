@@ -56,7 +56,6 @@ public class ChunkProviderCheese implements IChunkGenerator {
     private MapGenBase caveGenerator = new MapGenCaves();
     private MapGenBase ravineGenerator = new MapGenRavine();
     private MapGenCheeseVillage cheeseVillageGenerator = new MapGenCheeseVillage();
-    private CheeseTreeGen cheeseTreeGen = new CheeseTreeGen(false);
     private StructureOceanMonument oceanMonumentGenerator = new StructureOceanMonument();
     private Biome[] biomesForGeneration;
     double[] mainNoiseRegion;

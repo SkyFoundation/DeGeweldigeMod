@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class TreeDecorator extends BlockDecorator {
 
-    private CheeseTreeGen cheeseTreeGen = new CheeseTreeGen(true);
+    private CheeseTreeGen cheeseTreeGen = new CheeseTreeGen();
 
     @Override
     public void decorate(World world, int chunkX, int chunkZ, Random random, Chunk chunk) {
