@@ -61,6 +61,7 @@ public class CheeseFire extends Block {
 				.withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false))
 				.withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false))
 				.withProperty(UPPER, Boolean.valueOf(false)));
+
 		this.setTickRandomly(true);
 	}
 

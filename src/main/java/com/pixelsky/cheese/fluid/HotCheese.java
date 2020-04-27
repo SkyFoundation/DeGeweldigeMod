@@ -16,7 +16,7 @@ public class HotCheese extends Fluid {
     protected static float overlayAlpha = 0.2F;
    // protected static SoundEvent emptySound = SoundEvents.ITEM_BUCKET_EMPTY;
    // protected static SoundEvent fillSound = SoundEvents.ITEM_BUCKET_FILL;
-    protected static Material material = Material.WATER;
+ //   protected static Material material = Material.WATER;
 
 
     public HotCheese(){
@@ -36,17 +36,13 @@ public class HotCheese extends Fluid {
         return mapColor;
     }
 
-
-    public Material getMaterial()
-    {
-        return material;
-    }
-
+    /*
     @Override
     public boolean doesVaporize(FluidStack fluidStack)
     {
         if (block == null)
             return false;
-        return block.getDefaultState().getMaterial() == getMaterial();
+        return block.getDefaultState().getMaterial() == this
     }
+    */
 }
